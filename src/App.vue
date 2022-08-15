@@ -1,15 +1,22 @@
 <script setup lang="ts">
-import { computed, onMounted } from 'vue';
+import { computed, onMounted } from "vue";
 import { useI18n } from "vue-i18n";
 import { storeToRefs } from "pinia";
-import HeaderBar from './components/Block/HeaderBar.vue';
+import HeaderBar from "./components/Block/HeaderBar.vue";
 import {
-  useOsTheme, darkTheme,
-  jaJP, dateJaJP,
-  enUS, dateEnUS,
-  NGlobalStyle, NConfigProvider,
+  useOsTheme,
+  darkTheme,
+  jaJP,
+  dateJaJP,
+  enUS,
+  dateEnUS,
+  NGlobalStyle,
+  NConfigProvider,
   NSpace,
-  NLayout, NLayoutHeader, NLayoutContent, NLayoutFooter
+  NLayout,
+  NLayoutHeader,
+  NLayoutContent,
+  NLayoutFooter,
 } from "naive-ui";
 
 import { useStore } from "./store";
@@ -19,9 +26,7 @@ const { themeName } = storeToRefs(store);
 const theme = computed(() => (themeName.value === "dark" ? darkTheme : null));
 const { locale } = useI18n({ useScope: "global" });
 let localeNaive: any,
-  dateLocaleNaive: any = computed(() =>
-    getLocaleModule(locale.value as string)
-  );
+  dateLocaleNaive: any = computed(() => getLocaleModule(locale.value as string));
 
 function getLocaleModule(locale_name: string) {
   switch (locale_name) {
@@ -52,6 +57,4 @@ onMounted(() => {
   </n-config-provider>
 </template>
 
-
-<style scoped>
-</style>
+<style scoped></style>

@@ -3,10 +3,7 @@ import { computed } from "vue";
 import { DarkTheme20Regular as ThemeIcon } from "@vicons/fluent";
 import { storeToRefs } from "pinia";
 import { useStore } from "../../store";
-import {
-  NButton, NIcon
-} from 'naive-ui';
-
+import { NButton, NIcon } from "naive-ui";
 
 const store = useStore();
 const { themeName } = storeToRefs(store);
@@ -16,8 +13,8 @@ const switchTheme = () => {
 };
 
 const getButtonLabel = computed(() => {
-  return themeName.value === "dark" ? "button.light" : "button.dark";
-})
+  return themeName.value === "dark" ? "button.dark" : "button.light";
+});
 </script>
 
 <template>

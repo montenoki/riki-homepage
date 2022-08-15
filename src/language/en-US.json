@@ -5,5 +5,10 @@
     "button": {
         "dark": "Dark",
         "light": "Light"
+    },
+    "text": {
+        "top": {
+            "title": "Riviera Africa Partners"
+        }
     }
 }
