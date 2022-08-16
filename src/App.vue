@@ -23,7 +23,11 @@ import { useStore } from "./store";
 
 const store = useStore();
 const { themeName } = storeToRefs(store);
-const theme = computed(() => (themeName.value === "dark" ? darkTheme : null));
+
+// ユーザーtheme取得
+// const theme = computed(() => (themeName.value === "dark" ? darkTheme : null));
+
+const theme = null;
 const { locale } = useI18n({ useScope: "global" });
 let localeNaive: any,
   dateLocaleNaive: any = computed(() => getLocaleModule(locale.value as string));

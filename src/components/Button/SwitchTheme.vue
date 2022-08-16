@@ -18,7 +18,7 @@ const getButtonLabel = computed(() => {
 </script>
 
 <template>
-  <n-button @click="switchTheme">
+  <n-button ghost @click="switchTheme">
     <template #icon>
       <n-icon>
         <ThemeIcon />
