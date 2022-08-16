@@ -30,7 +30,9 @@ const { themeName } = storeToRefs(store);
 const theme = null;
 const { locale } = useI18n({ useScope: "global" });
 let localeNaive: any,
-  dateLocaleNaive: any = computed(() => getLocaleModule(locale.value as string));
+  dateLocaleNaive: any = computed(() =>
+    getLocaleModule(locale.value as string)
+  );
 
 function getLocaleModule(locale_name: string) {
   switch (locale_name) {
@@ -47,11 +49,15 @@ onMounted(() => {
 </script>
 
 <template>
-  <n-config-provider :theme="theme" :locale="localeNaive" :date-locale="dateLocaleNaive">
+  <n-config-provider
+    :theme="theme"
+    :locale="localeNaive"
+    :date-locale="dateLocaleNaive"
+  >
     <n-global-style />
     <n-layout>
       <n-layout-header bordered>
-        <HeaderBar />
+        <header-bar />
       </n-layout-header>
       <n-layout-content>
         <router-view />

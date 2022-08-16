@@ -5,12 +5,12 @@ import Section1 from "../components/Block/Section1.vue";
 </script>
 
 <template>
-  <NSpace vertical>
+  <n-space vertical>
     <TopSection />
     <hr />
     <Section1 />
     <hr />
-  </NSpace>
+  </n-space>
 </template>
 
 <style scoped></style>
